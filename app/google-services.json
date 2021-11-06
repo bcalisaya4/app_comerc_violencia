@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1045750245814",
+    "project_id": "violencia-0-app",
+    "storage_bucket": "violencia-0-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1045750245814:android:b18b934ac175e5d7f23917",
+        "android_client_info": {
+          "package_name": "com.example.violencia_0_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1045750245814-v9d3rh3r9tig3j96ao333dk5qkeunmdl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEF_07kJpOQVBFy50hgDMd0ugAYDu7Zas"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1045750245814-v9d3rh3r9tig3j96ao333dk5qkeunmdl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
