@@ -29,25 +29,27 @@
                 <LinearLayout
                     android:layout_width="215dp"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:gravity="center">
 
                     <Button
-                        android:id="@+id/button8"
-                        android:layout_width="match_parent"
+                        android:id="@+id/btn_register"
+                        android:layout_width="155dp"
                         android:layout_height="121dp"
-                        android:text="Button" />
+                        android:text="Registrarse" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:gravity="center">
 
                     <Button
-                        android:id="@+id/button9"
-                        android:layout_width="match_parent"
+                        android:id="@+id/btn_login"
+                        android:layout_width="152dp"
                         android:layout_height="121dp"
-                        android:text="Button" />
+                        android:text="iniciar sesion" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -59,12 +61,28 @@
                 <LinearLayout
                     android:layout_width="215dp"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"></LinearLayout>
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/btn_other"
+                        android:layout_width="152dp"
+                        android:layout_height="121dp"
+                        android:text="otros" />
+                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"></LinearLayout>
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/btn_inf"
+                        android:layout_width="152dp"
+                        android:layout_height="121dp"
+                        android:text="info" />
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
 
@@ -72,6 +90,15 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#450F0F"
-            android:orientation="vertical"></LinearLayout>
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/btn_panico"
+                android:layout_width="197dp"
+                android:layout_height="201dp"
+                android:layout_margin="16dp"
+                app:backgroundTint="#F63A3A" />
+        </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
