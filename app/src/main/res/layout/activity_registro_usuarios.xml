@@ -39,7 +39,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <EditText
-            android:id="@+id/editTextTextPersonName15"
+            android:id="@+id/editText_dni"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -47,7 +47,7 @@
             android:hint="DNI" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName12"
+            android:id="@+id/editText_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -60,7 +60,7 @@
             android:orientation="horizontal">
 
             <EditText
-                android:id="@+id/editTextTextPersonName13"
+                android:id="@+id/editText_last_name_p"
                 android:layout_width="177dp"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -73,7 +73,7 @@
                 android:layout_weight="1" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName14"
+                android:id="@+id/editText_last_name_m"
                 android:layout_width="189dp"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -82,7 +82,7 @@
         </LinearLayout>
 
         <EditText
-            android:id="@+id/editTextDate"
+            android:id="@+id/editText_date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -91,7 +91,7 @@
 
 
         <EditText
-            android:id="@+id/editTextTextEmailAddress"
+            android:id="@+id/editText_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -112,10 +112,10 @@
         >
 
         <Button
-            android:id="@+id/button7"
+            android:id="@+id/btn_save"
             android:layout_width="162dp"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="Guardar" />
     </LinearLayout>
 
     <LinearLayout

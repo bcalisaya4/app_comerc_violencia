@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         btn_login=findViewById(R.id.btn_login);
         btn_info=findViewById(R.id.btn_inf);
         btn_otros=findViewById(R.id.btn_other);
-        //btn_panico=findViewById(R.id.btn_panico);
+        //btn_panico=findViewById(R.id.btn_panic);
         // action button
         btn_registro.setOnClickListener(new View.OnClickListener() {
             @Override
