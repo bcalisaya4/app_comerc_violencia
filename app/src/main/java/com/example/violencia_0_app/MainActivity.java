@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         btn_registro =findViewById(R.id.btn_register);
         btn_login=findViewById(R.id.btn_login);
         btn_info=findViewById(R.id.btn_inf);
-        btn_otros=findViewById(R.id.btn_other);
+        //btn_otros=findViewById(R.id.btn_other);
         btn_panico=findViewById(R.id.btn_panic);
         btn_administrador = findViewById(R.id.btn_admin);
 
@@ -96,12 +96,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(),LoginAdmin.class));
             }
         });
+        /*
         btn_otros.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(),RegistroDenuncia.class));
             }
-        });
+        });*/
+
         btn_registro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
