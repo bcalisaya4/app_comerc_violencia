@@ -39,7 +39,7 @@
       app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
     <EditText
-        android:id="@+id/editTextTextPersonName1"
+        android:id="@+id/editText_correo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -47,7 +47,7 @@
         android:inputType="textEmailAddress" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/editText_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -68,7 +68,7 @@
       app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_ingresar"
         android:layout_width="155dp"
         android:layout_height="wrap_content"
         android:text="Ingresar" />

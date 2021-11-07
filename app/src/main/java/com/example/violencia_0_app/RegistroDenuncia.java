@@ -63,7 +63,7 @@ public class RegistroDenuncia extends AppCompatActivity {
         String ocupacion = ocupaciond.getText().toString();
         String telefono = telefonod.getText().toString();
         String correo = correod.getText().toString();
-        String estado_civil = estado_civild.getText().toString();
+        //String estado_civil = estado_civild.getText().toString();
         String direccion = direcciond.getText().toString();
 
 
@@ -75,7 +75,7 @@ public class RegistroDenuncia extends AppCompatActivity {
         newdenuncia.put("ocupacion",ocupacion);
         newdenuncia.put("telefono",telefono);
         newdenuncia.put("correo",correo);
-        newdenuncia.put("estado_civil",estado_civil);
+        //newdenuncia.put("estado_civil",estado_civil);
         newdenuncia.put("direccion",direccion);
 
 

@@ -93,12 +93,11 @@
             android:orientation="vertical"
             android:gravity="center">
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/btn_panico"
-                android:layout_width="197dp"
-                android:layout_height="201dp"
-                android:layout_margin="16dp"
-                app:backgroundTint="#F63A3A" />
+            <Button
+                android:id="@+id/btn_panic"
+                android:layout_width="152dp"
+                android:layout_height="121dp"
+                android:text="otros" />
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
