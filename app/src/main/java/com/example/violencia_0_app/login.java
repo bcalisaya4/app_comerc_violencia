@@ -54,8 +54,8 @@ public class login extends AppCompatActivity {
                                     usuario.setId(document.getId());
                                     db.collection("usuarios").document(document.getId()).update("logueado",true);
 
-                                    //Intent intent = new Intent(getApplicationContext(), type_class);
-                                    //startActivity(intent);
+                                    Intent intent = new Intent(getApplicationContext(), RegistroUsuarios.class);
+                                    startActivity(intent);
                                 }
 
 

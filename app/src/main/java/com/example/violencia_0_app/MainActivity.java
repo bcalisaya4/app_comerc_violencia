@@ -45,14 +45,12 @@ public class MainActivity extends AppCompatActivity {
         btn_otros=findViewById(R.id.btn_other);
         btn_panico=findViewById(R.id.btn_panic);
 
-        verifyPermissions();
-        Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
+        btn_otros.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void run() {
-                Toast.makeText(MainActivity.this, String.valueOf(lon), Toast.LENGTH_SHORT).show();
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),RegistroDenuncia.class));
             }
-        }, 1000);
+        });
         // action button
         btn_registro.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,13 +67,14 @@ public class MainActivity extends AppCompatActivity {
         btn_panico.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //verifyPermissions();
-
-                Intent intent = new Intent(getApplicationContext(), UploadAudio.class);
-                System.out.println(lat+"<--------latitud antes del intent-------------");
-                intent.putExtra("lat",lat);
-                intent.putExtra("lon",lon);
-                startActivity(intent);
+                verifyPermissions();
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        Toast.makeText(MainActivity.this, String.valueOf(lon), Toast.LENGTH_SHORT).show();
+                    }
+                }, 3000);
             }
         });
     }

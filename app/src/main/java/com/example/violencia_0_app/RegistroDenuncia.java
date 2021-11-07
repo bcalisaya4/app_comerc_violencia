@@ -17,12 +17,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class RegistroDenuncia extends AppCompatActivity {
-    private EditText dni,nombre,apellidop,apellidom,telefonod,ocupaciond,correod,direcciond;
-    private Spinner estado_civild;
-    public Button btn_guardar;
+    private EditText dni,nombre,apellidop,apellidom,telefonod,ocupaciond,correod,direcciond,description;
+    public Button btn_guardar;//private Spinner estado_civild;
     public FirebaseStorage firebaseStorage;
     public FirebaseFirestore db;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,13 +34,14 @@ public class RegistroDenuncia extends AppCompatActivity {
         apellidom = findViewById(R.id.editText_last_name_m);
         ocupaciond = findViewById(R.id.editText_ocupacion);
         telefonod = findViewById(R.id.editText_telefono);
-        correod = findViewById(R.id.editText_email);
-        estado_civild = findViewById(R.id.spinner_estado_civil);
+        correod = findViewById(R.id.editText_correo);
+        description = findViewById(R.id.editText_descripcion);
+        //estado_civild = findViewById(R.id.spinner_estado_civil);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.estado_civil_array, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        estado_civild.setAdapter(adapter);
+        //estado_civild.setAdapter(adapter);
 
         direcciond = findViewById(R.id.editText_direccion);
 
@@ -56,6 +55,7 @@ public class RegistroDenuncia extends AppCompatActivity {
     }
 
     public void denunciaAdd(){
+
         String dni_user = dni.getText().toString();
         String name_user = nombre.getText().toString();
         String last_name_p_user = apellidop.getText().toString();
@@ -63,9 +63,9 @@ public class RegistroDenuncia extends AppCompatActivity {
         String ocupacion = ocupaciond.getText().toString();
         String telefono = telefonod.getText().toString();
         String correo = correod.getText().toString();
+        String descrip = description.getText().toString();
         //String estado_civil = estado_civild.getText().toString();
         String direccion = direcciond.getText().toString();
-
 
         Map<String, Object> newdenuncia = new HashMap<>();
         newdenuncia.put("dni", dni_user);
@@ -75,11 +75,11 @@ public class RegistroDenuncia extends AppCompatActivity {
         newdenuncia.put("ocupacion",ocupacion);
         newdenuncia.put("telefono",telefono);
         newdenuncia.put("correo",correo);
+        newdenuncia.put("descripcion",descrip);
+        newdenuncia.put("estado","en espera");
         //newdenuncia.put("estado_civil",estado_civil);
         newdenuncia.put("direccion",direccion);
-
-
-        db.collection("usuarios").document().set(newdenuncia);
+        db.collection("denuncias").document().set(newdenuncia);
 
     }
 }
