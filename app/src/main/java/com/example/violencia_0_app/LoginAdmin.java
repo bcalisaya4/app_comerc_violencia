@@ -2,7 +2,6 @@ package com.example.violencia_0_app;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.ContentValues;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -16,29 +15,28 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.storage.FirebaseStorage;
 
-public class login extends AppCompatActivity {
+public class LoginAdmin extends AppCompatActivity {
     private Button btn_intro;
     private TextView correo,contraseña;
     private FirebaseFirestore db;
     private FirebaseStorage firebaseStorage;
     //private daoUsuario dao;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //dao = new daoUsuario(this);
         db = FirebaseFirestore.getInstance();
         firebaseStorage = FirebaseStorage.getInstance();
-        setContentView(R.layout.activity_login);
-        correo = findViewById(R.id.editText_correo);
-        contraseña = findViewById(R.id.editText_password);
-        btn_intro = findViewById(R.id.btn_ingresar);
-
+        setContentView(R.layout.activity_login_admin);
+        correo = findViewById(R.id.editText_correo_admin);
+        contraseña = findViewById(R.id.editText_password_admin);
+        btn_intro = findViewById(R.id.btn_ingresar_admin);
         btn_intro.setOnClickListener(new View.OnClickListener() {
 
             Class type_class = null;
             @Override
             public void onClick(View v) {
-                db.collection("usuarios")
+                db.collection("Administrador")
                         .whereEqualTo("correo",correo.getText().toString())
                         .whereEqualTo("contraseña",contraseña.getText().toString())
                         .get()
@@ -54,8 +52,7 @@ public class login extends AppCompatActivity {
                                     usuario.setId(document.getId());
                                     db.collection("usuarios").document(document.getId()).update("logueado",true);
 
-                                    Intent intent = new Intent(getApplicationContext(), ListaDenuncias.class);
-                                    intent.putExtra("dni",usuario.getDni() );
+                                    Intent intent = new Intent(getApplicationContext(), MainAdmin.class);
                                     startActivity(intent);
                                 }
 

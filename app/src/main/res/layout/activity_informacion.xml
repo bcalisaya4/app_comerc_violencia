@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Informacion">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="410dp"
+        android:layout_height="86dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="62dp"
+            android:backgroundTint="#020202"
+            android:text="Informacion Gobierno del Peru"
+            android:textColor="#000000"
+            android:textSize="30dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <TextView
+            android:id="@+id/textDenunciante"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:backgroundTint="#020202"
+            android:text="Denunciar Violencia Familiar y Sexual"
+            android:textColor="#000000"
+            android:textSize="25dp" />
+
+        <Button
+            android:id="@+id/btn_CEM"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Centros de Emergencia Mujer (CEM)"/>
+        <Button
+            android:id="@+id/btn_linea_100"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Línea 100"/>
+        <Button
+            android:id="@+id/btn_chat_100"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chata 100"/>
+        <Button
+            android:id="@+id/btn_SAU"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Servicio de Atención Urgente (SAU)"/>
+        <Button
+            android:id="@+id/btn_HRT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hogar de Refugio Temporal (HRT)"/>
+        <Button
+            android:id="@+id/btn_llamar_100"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Llamar linea 100"
+            android:onClick="onClickLlamada"/>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

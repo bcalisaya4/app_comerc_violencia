@@ -9,11 +9,18 @@
     <LinearLayout
         android:layout_width="411dp"
         android:layout_height="734dp"
+        android:background="#450F0F"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:background="#000000"
+            android:orientation="vertical"></LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -27,28 +34,30 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
-                    android:layout_width="215dp"
+                    android:layout_width="206dp"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:orientation="vertical">
 
                     <Button
                         android:id="@+id/btn_register"
                         android:layout_width="155dp"
                         android:layout_height="121dp"
+                        android:backgroundTint="#009688"
                         android:text="Registrarse" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:orientation="vertical">
 
                     <Button
                         android:id="@+id/btn_login"
                         android:layout_width="152dp"
                         android:layout_height="121dp"
+                        android:backgroundTint="#8BC34A"
                         android:text="iniciar sesion" />
                 </LinearLayout>
             </LinearLayout>
@@ -59,28 +68,37 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
-                    android:layout_width="215dp"
+                    android:layout_width="204dp"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:orientation="vertical">
 
                     <Button
                         android:id="@+id/btn_other"
-                        android:layout_width="152dp"
-                        android:layout_height="121dp"
+                        android:layout_width="114dp"
+                        android:layout_height="86dp"
                         android:text="otros" />
+
+                    <Button
+                        android:id="@+id/btn_admin"
+                        android:layout_width="99dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#03A9F4"
+                        android:text="admin" />
+
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:orientation="vertical">
 
                     <Button
                         android:id="@+id/btn_inf"
                         android:layout_width="152dp"
                         android:layout_height="121dp"
+                        android:backgroundTint="#FFC107"
                         android:text="info" />
                 </LinearLayout>
             </LinearLayout>
@@ -88,16 +106,21 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="278dp"
             android:background="#450F0F"
-            android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="vertical">
 
             <Button
                 android:id="@+id/btn_panic"
-                android:layout_width="152dp"
+                android:layout_width="173dp"
                 android:layout_height="121dp"
-                android:text="otros" />
+                android:backgroundTint="#D63131"
+                android:text="panic"
+                app:icon="@android:drawable/ic_dialog_alert"
+                app:strokeColor="#00FFFFFF" />
+
         </LinearLayout>
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

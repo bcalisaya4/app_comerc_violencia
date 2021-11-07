@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ListaDenuncias">
+    tools:context=".ListaAlertasAdmin">
+
 
     <ScrollView
         android:id="@+id/scrollView5"
@@ -19,37 +20,28 @@
             android:orientation="vertical">
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/list"
-                android:name="com.example.violencia_0_app.ListaDenuncias"
+                android:id="@+id/alert_list_admin"
+                android:name="com.example.violencia_0_app.ListaAlertasAdmin"
                 android:layout_width="match_parent"
-                android:layout_height="548dp"
+                android:layout_height="610dp"
                 android:layout_marginTop="40dp"
                 android:padding="25dp"
                 app:layoutManager="LinearLayoutManager"
                 tools:context=".Tipo"
-                tools:listitem="@layout/activity_card_denuncia">
+                tools:listitem="@layout/activity_card_alerta_admin">
 
             </androidx.recyclerview.widget.RecyclerView>
 
         </LinearLayout>
     </ScrollView>
 
-    <Button
-        android:id="@+id/btn_denuncia"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:text="Registrar denuncia"
-        app:layout_constraintBottom_toBottomOf="@+id/scrollView5"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/btn_back"
+        android:id="@+id/btn_back_admin_alert"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/common_full_open_on_phone" />
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

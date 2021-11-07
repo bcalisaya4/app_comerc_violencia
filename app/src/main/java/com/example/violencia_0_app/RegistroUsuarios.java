@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class RegistroUsuarios extends AppCompatActivity {
-    private EditText dni,nombre,apellidop,apellidom,fecha,correo;
+    private EditText dni,nombre,apellidop,apellidom,fecha,correo,contraseña;
     public Button btn_guardar;
     public FirebaseStorage firebaseStorage;
     public FirebaseFirestore db;
@@ -32,6 +32,7 @@ public class RegistroUsuarios extends AppCompatActivity {
         apellidom = findViewById(R.id.editText_last_name_m);
         fecha = findViewById(R.id.editText_date);
         correo = findViewById(R.id.editText_email);
+        contraseña = findViewById(R.id.editText_password);
         btn_guardar = findViewById(R.id.btn_save);
 
         btn_guardar.setOnClickListener((View vista) -> {
@@ -46,6 +47,7 @@ public class RegistroUsuarios extends AppCompatActivity {
         String last_name_m_user = apellidom.getText().toString();
         String date_born_user = fecha.getText().toString();
         String email_user = correo.getText().toString();
+        String password = contraseña.getText().toString();
 
         Map<String, Object> newusers = new HashMap<>();
         newusers.put("dni", dni_user);
@@ -54,6 +56,7 @@ public class RegistroUsuarios extends AppCompatActivity {
         newusers.put("apellido_materno",last_name_m_user);
         newusers.put("fecha_nacimiento", date_born_user);
         newusers.put("correo", email_user);
+        newusers.put("contraseña",password);
         db.collection("usuarios").document().set(newusers);
 
     }
