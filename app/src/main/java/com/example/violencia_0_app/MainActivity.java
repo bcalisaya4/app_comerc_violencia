@@ -173,7 +173,7 @@ public class MainActivity extends AppCompatActivity {
                                 }
                             }, 2000);
                         }
-                    }, 5000);
+                    }, 20000);
                 } catch (IOException e){
                     e.printStackTrace();
                 }

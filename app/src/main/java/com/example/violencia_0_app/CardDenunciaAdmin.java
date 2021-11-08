@@ -51,12 +51,12 @@ public class CardDenunciaAdmin extends RecyclerView.Adapter<CardDenunciaAdmin.Vi
                     //Navigation.findNavController(vista).navigate(R.id.ListForBrandVehiculo, bundle);
                     Intent intent = new Intent(context, ListForBrandVehiculo.class);
                     intent.putExtra("usuario_objeto",bundle);
-*/
+
                 Intent intent = new Intent(context, ListaDenuncias.class);
                 intent.putExtra("marca_vehiculo", mValues.get(position).getDescripcion());
                 intent.putExtra("tipo_vehiculo", mValues.get(position).getEstado());
                 context.startActivity(intent);
-                //}
+                //}*/
             }
         });
 
